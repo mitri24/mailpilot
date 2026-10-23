@@ -1,0 +1,24 @@
+{
+  "name": "mailpilot",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.5.2",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r --parallel run typecheck",
+    "test": "pnpm -r run test",
+    "db:migrate": "pnpm --filter @mailpilot/database run migrate",
+    "db:generate": "pnpm --filter @mailpilot/database run generate",
+    "dev:api": "pnpm --filter @mailpilot/api run dev",
+    "dev:worker": "pnpm --filter @mailpilot/worker run dev",
+    "openapi:export": "pnpm --filter @mailpilot/api run openapi:export"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

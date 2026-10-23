@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+# Apple
+apps/apple/*.xcodeproj
+apps/apple/**/xcuserdata/
+apps/apple/.build/
+apps/apple/**/.build/
+apps/apple/**/.swiftpm/
+apps/apple/DerivedData/

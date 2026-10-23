@@ -1,0 +1,84 @@
+# Local development. Secrets come from ../.env (copy .env.example), never from this file.
+name: mailpilot
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: mailpilot
+      POSTGRES_PASSWORD: mailpilot
+      POSTGRES_DB: mailpilot
+    ports:
+      - "55432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mailpilot -d mailpilot"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  # Local IMAP server for connector and end-to-end tests (no real mailbox involved).
+  # Test users log in with their full address (greenmail.users.login=email). Credentials are
+  # throwaway test values; each connector test scenario uses its own user for isolation.
+  # Authentication is enforced: GreenMail disables it whenever greenmail.auth.disabled is set at
+  # all (even "=false"), so that property must stay absent.
+  greenmail:
+    image: greenmail/standalone:2.1.3
+    profiles: ["test"]
+    environment:
+      GREENMAIL_OPTS: >-
+        -Dgreenmail.setup.test.all -Dgreenmail.hostname=0.0.0.0
+        -Dgreenmail.verbose=false
+        -Dgreenmail.users.login=email
+        -Dgreenmail.users=e2e:e2e-pass@example.com,alice:alice-pass@example.com,bob:bob-pass@example.com,carol:carol-pass@example.com,dave:dave-pass@example.com,erin:erin-pass@example.com,frank:frank-pass@example.com
+    ports:
+      - "3025:3025"
+      - "3143:3143"
+      - "3993:3993"
+
+  migrate:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    profiles: ["app"]
+    command: ["pnpm", "--filter", "@mailpilot/database", "run", "migrate"]
+    environment:
+      DATABASE_URL: postgres://mailpilot:mailpilot@postgres:5432/mailpilot
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    profiles: ["app"]
+    command: ["pnpm", "--filter", "@mailpilot/api", "start"]
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgres://mailpilot:mailpilot@postgres:5432/mailpilot
+      HOST: 0.0.0.0
+    ports:
+      - "8787:8787"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  worker:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    profiles: ["app"]
+    command: ["pnpm", "--filter", "@mailpilot/worker", "start"]
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgres://mailpilot:mailpilot@postgres:5432/mailpilot
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+volumes:
+  pgdata:
