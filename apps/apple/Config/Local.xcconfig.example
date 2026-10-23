@@ -1,0 +1,6 @@
+// Kopieren nach Config/Local.xcconfig und anpassen (die Datei ist in apps/apple/.gitignore).
+// MAILPILOT_BUNDLE_ID = de.deinname.mailpilot
+// MAILPILOT_TEAM_ID = ABCDE12345
+// MAILPILOT_API_BASE_URL = https:/$()/mailpilot.deine-domain.example
+// Auf macOS ist alternativ eine nicht registrierte App Group mit Team-Präfix möglich:
+// MAILPILOT_APP_GROUP = $(TeamIdentifierPrefix)$(MAILPILOT_BUNDLE_ID)

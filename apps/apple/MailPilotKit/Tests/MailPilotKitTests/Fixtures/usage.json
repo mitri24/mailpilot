@@ -1,0 +1,10 @@
+{
+  "month": "2026-10",
+  "spentCents": 123.45,
+  "budgetCents": 500,
+  "budgetReached": false,
+  "pendingAnalysisCount": 12,
+  "analyzedThisMonth": 87,
+  "inputTokens": 512000,
+  "outputTokens": 64000
+}

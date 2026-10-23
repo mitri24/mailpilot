@@ -1,0 +1,8 @@
+# Erzeugt von XcodeGen bzw. SwiftPM
+*.xcodeproj
+xcuserdata/
+.build/
+.swiftpm/
+DerivedData/
+# Lokale Signatur- und Server-Einstellungen
+Config/Local.xcconfig

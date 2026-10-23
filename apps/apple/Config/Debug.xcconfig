@@ -1,0 +1,4 @@
+// Entwicklung: lokaler Server (services/api, Standardport 8787). "//" leitet in xcconfig einen Kommentar ein, daher $().
+MAILPILOT_API_BASE_URL = http:/$()/localhost:8787
+
+#include "Base.xcconfig"

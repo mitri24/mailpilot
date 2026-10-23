@@ -1,0 +1,4 @@
+// Produktion: PLATZHALTER – eigene HTTPS-Adresse des MailPilot-Servers in Config/Local.xcconfig setzen.
+MAILPILOT_API_BASE_URL = https:/$()/mailpilot.example.invalid
+
+#include "Base.xcconfig"

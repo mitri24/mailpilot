@@ -1,0 +1,397 @@
+{
+  "changes": [
+    {
+      "seq": "1042",
+      "entityType": "settings",
+      "entityId": "0f0e0d0c-0b0a-4908-8706-050403020100",
+      "op": "upsert",
+      "version": 2,
+      "data": {
+        "version": 2,
+        "timezone": "Europe/Paris",
+        "scanEnabled": true,
+        "scanTime": "07:00",
+        "extraScanIntervalMinutes": null,
+        "aiMonthlyBudgetCents": 500,
+        "maxMessageChars": 20000,
+        "maxAttachmentBytes": 5000000,
+        "notifyDailyDigest": true,
+        "notifyUrgentDeadlines": false,
+        "notifyClarifications": true,
+        "quietHoursStart": "22:00",
+        "quietHoursEnd": "07:00"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "account",
+      "entityId": "11111111-1111-4111-8111-111111111111",
+      "op": "upsert",
+      "version": 3,
+      "data": {
+        "id": "11111111-1111-4111-8111-111111111111",
+        "version": 3,
+        "provider": "imap",
+        "displayName": "Hochschule",
+        "emailAddress": "student@univ.example",
+        "aliases": [
+          "student@univ.example"
+        ],
+        "status": "error",
+        "capabilities": {
+          "incrementalSync": "imap_condstore",
+          "customKeywords": true,
+          "flagged": true,
+          "labels": false,
+          "categories": false,
+          "copyToFolder": true,
+          "webLinks": false,
+          "immutableIds": false,
+          "supportedMarkers": [
+            "none",
+            "imap_keyword",
+            "imap_flagged",
+            "imap_copy_folder"
+          ],
+          "notes": [
+            "Eigene Schlüsselwörter zeigt Apple Mail nicht an."
+          ]
+        },
+        "marker": {
+          "strategy": "imap_keyword",
+          "keyword": "MailPilot",
+          "folder": null,
+          "acknowledgedLimitations": true
+        },
+        "markerReliable": false,
+        "initialImportDays": 14,
+        "includeSent": true,
+        "lastSuccessfulFetchAt": "2026-10-22T05:00:03.000Z",
+        "lastSuccessfulAnalysisAt": "2026-10-22T05:01:10.000Z",
+        "pendingAnalysisCount": 4,
+        "markerFailures": 1,
+        "lastError": {
+          "code": "auth_failed",
+          "message": "Anmeldung beim Mailserver fehlgeschlagen",
+          "at": "2026-10-23T05:00:01.000Z",
+          "action": "Passwort prüfen"
+        },
+        "createdAt": "2026-10-01T10:00:00.000Z",
+        "updatedAt": "2026-10-23T05:00:01.000Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "account",
+      "entityId": "11111111-1111-4111-8111-222222222222",
+      "op": "upsert",
+      "version": 1,
+      "data": {
+        "id": "11111111-1111-4111-8111-222222222222",
+        "version": 1,
+        "provider": "gmail",
+        "displayName": "Privat",
+        "emailAddress": "privat@gmail.example",
+        "aliases": [],
+        "status": "active",
+        "capabilities": null,
+        "marker": {
+          "strategy": "none",
+          "keyword": null,
+          "folder": null,
+          "acknowledgedLimitations": false
+        },
+        "markerReliable": true,
+        "initialImportDays": 14,
+        "includeSent": true,
+        "lastSuccessfulFetchAt": "2026-10-22T05:00:03.000Z",
+        "lastSuccessfulAnalysisAt": "2026-10-22T05:01:10.000Z",
+        "pendingAnalysisCount": 0,
+        "markerFailures": 0,
+        "lastError": null,
+        "createdAt": "2026-10-01T10:00:00.000Z",
+        "updatedAt": "2026-10-23T05:00:01.000Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "task",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "op": "upsert",
+      "version": 7,
+      "data": {
+        "id": "33333333-3333-4333-8333-333333333331",
+        "version": 7,
+        "origin": "ai",
+        "status": "doing",
+        "waiting": true,
+        "waitingCheckAt": "2026-10-30",
+        "snoozedUntil": "2026-10-24T08:00:00+02:00",
+        "plannedFor": "2026-10-26",
+        "sortKey": 1.5,
+        "title": "Studienbescheinigung an Claire schicken",
+        "nextStep": "PDF im Studierendenportal laden und an Claire senden",
+        "summary": "Die Hochschule bittet um eine aktuelle Studienbescheinigung für das Austauschprogramm.",
+        "priority": "critical",
+        "priorityReason": "Belegte Frist; ohne Bescheinigung verfällt der Platz.",
+        "priorityIsManual": false,
+        "deadline": {
+          "date": "2026-11-02",
+          "dateTime": null,
+          "precision": "date",
+          "kind": "explicit",
+          "sourceQuote": "jusqu'à lundi 2 novembre"
+        },
+        "deadlineIsManual": false,
+        "why": "Du bist direkt adressiert. Im zweiten Absatz wirst du gebeten, die Bescheinigung zu schicken.",
+        "requiresAttachmentReading": true,
+        "estimatedMinutes": 15,
+        "estimateSource": "estimate",
+        "ai": {
+          "title": "Studienbescheinigung an Claire schicken",
+          "nextStep": "PDF im Studierendenportal laden und an Claire senden",
+          "summary": "Die Hochschule bittet um eine aktuelle Studienbescheinigung für das Austauschprogramm.",
+          "priority": "critical",
+          "priorityReason": "Belegte Frist; ohne Bescheinigung verfällt der Platz.",
+          "deadline": {
+            "date": "2026-11-02",
+            "dateTime": null,
+            "precision": "date",
+            "kind": "explicit",
+            "sourceQuote": "jusqu'à lundi 2 novembre"
+          },
+          "why": "Du bist direkt adressiert. Im zweiten Absatz wirst du gebeten, die Bescheinigung zu schicken."
+        },
+        "manual": {
+          "title": null,
+          "nextStep": null,
+          "priority": null,
+          "deadline": null,
+          "deadlineCleared": false
+        },
+        "accountIds": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "primarySource": {
+          "messageId": "22222222-2222-4222-8222-222222222221",
+          "accountId": "11111111-1111-4111-8111-111111111111",
+          "subject": "Attestation de scolarité",
+          "fromName": "Claire Dubois",
+          "fromAddress": "claire.dubois@univ.example",
+          "sentAt": "2026-10-20T11:15:00+02:00"
+        },
+        "sourceCount": 2,
+        "openClarifications": 1,
+        "latestChange": "Die Frist wurde von Freitag auf Montag verschoben.",
+        "doneAt": null,
+        "dismissedAt": null,
+        "mergedIntoTaskId": null,
+        "createdAt": "2026-10-20T09:20:00.000Z",
+        "updatedAt": "2026-10-22T16:05:12.345Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "task",
+      "entityId": "33333333-3333-4333-8333-333333333332",
+      "op": "upsert",
+      "version": 1,
+      "data": {
+        "id": "33333333-3333-4333-8333-333333333332",
+        "version": 1,
+        "origin": "manual",
+        "status": "todo",
+        "waiting": false,
+        "waitingCheckAt": null,
+        "snoozedUntil": null,
+        "plannedFor": null,
+        "sortKey": null,
+        "title": "Fahrradschloss kaufen",
+        "nextStep": null,
+        "summary": null,
+        "priority": "can_wait",
+        "priorityReason": "Von dir festgelegt",
+        "priorityIsManual": true,
+        "deadline": {
+          "date": null,
+          "dateTime": "2026-10-30T17:00:00.000Z",
+          "precision": "datetime",
+          "kind": "explicit",
+          "sourceQuote": null
+        },
+        "deadlineIsManual": true,
+        "why": null,
+        "requiresAttachmentReading": false,
+        "estimatedMinutes": 30,
+        "estimateSource": "user",
+        "ai": {
+          "title": null,
+          "nextStep": null,
+          "summary": null,
+          "priority": null,
+          "priorityReason": null,
+          "deadline": null,
+          "why": null
+        },
+        "manual": {
+          "title": "Fahrradschloss kaufen",
+          "nextStep": null,
+          "priority": "can_wait",
+          "deadline": {
+            "date": null,
+            "dateTime": "2026-10-30T17:00:00.000Z",
+            "precision": "datetime"
+          },
+          "deadlineCleared": false
+        },
+        "accountIds": [],
+        "primarySource": null,
+        "sourceCount": 0,
+        "openClarifications": 0,
+        "latestChange": null,
+        "doneAt": null,
+        "dismissedAt": null,
+        "mergedIntoTaskId": null,
+        "createdAt": "2026-10-21T18:00:00Z",
+        "updatedAt": "2026-10-21T18:00:00Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "note",
+      "entityId": "44444444-4444-4444-8444-444444444441",
+      "op": "upsert",
+      "version": 2,
+      "data": {
+        "id": "44444444-4444-4444-8444-444444444441",
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "version": 2,
+        "body": "Bescheinigung im Portal angefragt.",
+        "conflictOfNoteId": null,
+        "createdAt": "2026-10-21T07:00:00.000Z",
+        "updatedAt": "2026-10-22T07:30:00.000Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "note",
+      "entityId": "44444444-4444-4444-8444-444444444442",
+      "op": "upsert",
+      "version": 1,
+      "data": {
+        "id": "44444444-4444-4444-8444-444444444442",
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "version": 1,
+        "body": "Bescheinigung angefragt, kommt per Post.",
+        "conflictOfNoteId": "44444444-4444-4444-8444-444444444441",
+        "createdAt": "2026-10-22T07:31:00.000Z",
+        "updatedAt": "2026-10-22T07:31:00.000Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "checklist_item",
+      "entityId": "55555555-5555-4555-8555-555555555551",
+      "op": "upsert",
+      "version": 2,
+      "data": {
+        "id": "55555555-5555-4555-8555-555555555551",
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "version": 2,
+        "title": "PDF herunterladen",
+        "done": true,
+        "position": 1,
+        "source": "ai",
+        "createdAt": "2026-10-20T09:20:00.000Z",
+        "updatedAt": "2026-10-21T08:00:00.000Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "checklist_item",
+      "entityId": "55555555-5555-4555-8555-555555555552",
+      "op": "upsert",
+      "version": 1,
+      "data": {
+        "id": "55555555-5555-4555-8555-555555555552",
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "version": 1,
+        "title": "An Claire senden",
+        "done": false,
+        "position": 2,
+        "source": "user",
+        "createdAt": "2026-10-21T08:01:00.000Z",
+        "updatedAt": "2026-10-21T08:01:00.000Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "clarification",
+      "entityId": "66666666-6666-4666-8666-666666666661",
+      "op": "upsert",
+      "version": 1,
+      "data": {
+        "id": "66666666-6666-4666-8666-666666666661",
+        "version": 1,
+        "kind": "membership",
+        "status": "open",
+        "question": "Diese Mail betrifft die Gruppe B2. Gehörst du dazu?",
+        "reason": "Nur Mitglieder der Gruppe müssen das Formular abgeben.",
+        "excerpt": "Les étudiants du groupe B2 doivent rendre le formulaire.",
+        "options": [
+          {
+            "id": "yes",
+            "label": "Ja",
+            "scope": "permanent"
+          },
+          {
+            "id": "no",
+            "label": "Nein",
+            "scope": "permanent"
+          },
+          {
+            "id": "not_this_time",
+            "label": "Diesmal nicht",
+            "scope": "once"
+          },
+          {
+            "id": "later",
+            "label": "Weiß ich noch nicht",
+            "scope": "once"
+          }
+        ],
+        "allowFreeText": true,
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "messageId": "22222222-2222-4222-8222-222222222222",
+        "answer": null,
+        "createdAt": "2026-10-22T06:00:00.000Z",
+        "updatedAt": "2026-10-22T06:00:00.000Z"
+      }
+    },
+    {
+      "seq": "1042",
+      "entityType": "rule",
+      "entityId": "77777777-7777-4777-8777-777777777771",
+      "op": "upsert",
+      "version": 1,
+      "data": {
+        "id": "77777777-7777-4777-8777-777777777771",
+        "version": 1,
+        "kind": "membership",
+        "subject": "B2",
+        "value": {
+          "applies": true,
+          "note": null
+        },
+        "description": "Du gehörst zu „B2“",
+        "sourceClarificationId": "66666666-6666-4666-8666-666666666661",
+        "createdAt": "2026-10-22T06:10:00.000Z",
+        "updatedAt": "2026-10-22T06:10:00.000Z"
+      }
+    }
+  ],
+  "nextCursor": "1042",
+  "hasMore": false,
+  "resetRequired": false,
+  "serverTime": "2026-10-23T08:00:00.000Z"
+}

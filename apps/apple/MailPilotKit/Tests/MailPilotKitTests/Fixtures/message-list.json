@@ -1,0 +1,39 @@
+{
+  "messages": [
+    {
+      "id": "22222222-2222-4222-8222-222222222221",
+      "accountId": "11111111-1111-4111-8111-111111111111",
+      "subject": "Attestation de scolarité",
+      "from": {
+        "name": "Claire Dubois",
+        "address": "claire.dubois@univ.example"
+      },
+      "sentAt": "2026-10-20T11:15:00+02:00",
+      "snippet": "Bonjour, merci de nous envoyer votre attestation…",
+      "language": "fr",
+      "hasAttachments": true,
+      "analysisStatus": "analyzed",
+      "taskIds": [
+        "33333333-3333-4333-8333-333333333331"
+      ],
+      "folders": [
+        "INBOX"
+      ],
+      "deleted": false
+    },
+    {
+      "id": "22222222-2222-4222-8222-222222222222",
+      "accountId": "11111111-1111-4111-8111-111111111111",
+      "subject": null,
+      "from": null,
+      "sentAt": null,
+      "snippet": null,
+      "language": null,
+      "hasAttachments": false,
+      "analysisStatus": "budget_paused",
+      "taskIds": [],
+      "folders": [],
+      "deleted": true
+    }
+  ]
+}

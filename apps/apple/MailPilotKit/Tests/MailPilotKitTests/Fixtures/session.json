@@ -1,0 +1,11 @@
+{
+  "token": "mp_dev_session_token_example",
+  "expiresAt": "2027-01-21T08:00:00.000Z",
+  "user": {
+    "id": "0f0e0d0c-0b0a-4908-8706-050403020100",
+    "displayName": "Alex",
+    "email": null,
+    "devLogin": true,
+    "createdAt": "2026-10-01T10:00:00.000Z"
+  }
+}

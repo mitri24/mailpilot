@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "id": "cdcdcdcd-cdcd-4dcd-8dcd-cdcdcdcdcdc1",
+      "accountId": "11111111-1111-4111-8111-111111111111",
+      "name": "INBOX",
+      "path": "INBOX",
+      "role": "inbox",
+      "selected": true
+    },
+    {
+      "id": "cdcdcdcd-cdcd-4dcd-8dcd-cdcdcdcdcdc2",
+      "accountId": "11111111-1111-4111-8111-111111111111",
+      "name": "Gesendet",
+      "path": "Sent",
+      "role": "sent",
+      "selected": true
+    },
+    {
+      "id": "cdcdcdcd-cdcd-4dcd-8dcd-cdcdcdcdcdc3",
+      "accountId": "11111111-1111-4111-8111-111111111111",
+      "name": "Junk",
+      "path": "Junk",
+      "role": "spam",
+      "selected": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "message": {
+    "id": "22222222-2222-4222-8222-222222222221",
+    "accountId": "11111111-1111-4111-8111-111111111111",
+    "subject": "Attestation de scolarité",
+    "from": {
+      "name": "Claire Dubois",
+      "address": "claire.dubois@univ.example"
+    },
+    "sentAt": "2026-10-20T11:15:00+02:00",
+    "snippet": "Bonjour, merci de nous envoyer votre attestation…",
+    "language": "fr",
+    "hasAttachments": true,
+    "analysisStatus": "analyzed",
+    "taskIds": [
+      "33333333-3333-4333-8333-333333333331"
+    ],
+    "folders": [
+      "INBOX"
+    ],
+    "deleted": false
+  },
+  "to": [
+    {
+      "name": null,
+      "address": "student@univ.example"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Scolarité",
+      "address": "scolarite@univ.example"
+    }
+  ],
+  "bodyText": "Bonjour,\n\nmerci de nous envoyer votre attestation de scolarité avant vendredi.\n\nCordialement,\nClaire",
+  "bodyHtml": "<p>Bonjour,</p><p>merci de nous envoyer votre attestation de scolarité avant vendredi.</p>",
+  "remoteContentBlocked": 2,
+  "attachments": [
+    {
+      "filename": "formulaire.pdf",
+      "contentType": "application/pdf",
+      "size": 183204,
+      "inline": false
+    }
+  ],
+  "open": {
+    "webLink": null,
+    "appleMailUrl": "message://%3C20261020091500.abc%40univ.example%3E",
+    "appleMailNote": "Öffnet Apple Mail nur, wenn die Mail dort mit derselben Message-ID vorliegt. Nicht garantiert.",
+    "searchHints": {
+      "from": "claire.dubois@univ.example",
+      "subject": "Attestation de scolarité",
+      "date": "20.10.2026",
+      "messageIdHeader": "<20261020091500.abc@univ.example>"
+    }
+  },
+  "markerStatus": "applied"
+}

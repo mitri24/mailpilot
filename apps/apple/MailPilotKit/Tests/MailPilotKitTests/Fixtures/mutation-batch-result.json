@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "idempotencyKey": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1",
+      "status": "applied",
+      "entityType": "task",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "version": 8,
+      "conflictingFields": [],
+      "createdEntityId": null,
+      "error": null
+    },
+    {
+      "idempotencyKey": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2",
+      "status": "duplicate",
+      "entityType": "task",
+      "entityId": "33333333-3333-4333-8333-333333333332",
+      "version": 1,
+      "conflictingFields": [],
+      "createdEntityId": null,
+      "error": null
+    },
+    {
+      "idempotencyKey": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3",
+      "status": "conflict",
+      "entityType": "task",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "version": 9,
+      "conflictingFields": [
+        "status"
+      ],
+      "createdEntityId": null,
+      "error": null
+    },
+    {
+      "idempotencyKey": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa4",
+      "status": "conflict",
+      "entityType": "note",
+      "entityId": "44444444-4444-4444-8444-444444444441",
+      "version": 3,
+      "conflictingFields": [],
+      "createdEntityId": "44444444-4444-4444-8444-444444444442",
+      "error": null
+    },
+    {
+      "idempotencyKey": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa5",
+      "status": "rejected",
+      "entityType": "checklist_item",
+      "entityId": "55555555-5555-4555-8555-555555555551",
+      "version": null,
+      "conflictingFields": [],
+      "createdEntityId": null,
+      "error": {
+        "code": "not_found",
+        "message": "Eintrag nicht gefunden"
+      }
+    }
+  ]
+}

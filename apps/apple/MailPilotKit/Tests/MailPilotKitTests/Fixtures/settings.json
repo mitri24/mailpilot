@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "timezone": "Europe/Paris",
+  "scanEnabled": true,
+  "scanTime": "07:00",
+  "extraScanIntervalMinutes": null,
+  "aiMonthlyBudgetCents": 500,
+  "maxMessageChars": 20000,
+  "maxAttachmentBytes": 5000000,
+  "notifyDailyDigest": true,
+  "notifyUrgentDeadlines": false,
+  "notifyClarifications": true,
+  "quietHoursStart": "22:00",
+  "quietHoursEnd": "07:00"
+}

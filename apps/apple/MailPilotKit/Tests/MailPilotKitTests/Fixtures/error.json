@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "idempotency_key_reused",
+    "message": "Idempotency-Key wurde für eine andere Änderung verwendet",
+    "details": {
+      "reason": "hash"
+    }
+  }
+}

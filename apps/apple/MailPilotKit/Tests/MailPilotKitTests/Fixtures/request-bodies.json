@@ -1,0 +1,171 @@
+[
+  {
+    "name": "taskCreate",
+    "schema": "TaskCreate",
+    "value": {
+      "id": "33333333-3333-4333-8333-333333333332",
+      "title": "Fahrradschloss kaufen",
+      "priority": "can_wait",
+      "deadline": {
+        "date": "2026-10-30",
+        "dateTime": null,
+        "precision": "date"
+      },
+      "note": "Im Laden am Bahnhof"
+    }
+  },
+  {
+    "name": "accountPatchMarker",
+    "schema": "AccountPatch",
+    "value": {
+      "marker": {
+        "strategy": "imap_flagged",
+        "keyword": null,
+        "folder": null,
+        "acknowledgedLimitations": true
+      }
+    }
+  },
+  {
+    "name": "accountPatchPause",
+    "schema": "AccountPatch",
+    "value": {
+      "status": "paused",
+      "aliases": [
+        "student@univ.example"
+      ],
+      "initialImportDays": 30,
+      "includeSent": false
+    }
+  },
+  {
+    "name": "correctionNotATask",
+    "schema": "Correction",
+    "value": {
+      "kind": "not_a_task"
+    }
+  },
+  {
+    "name": "correctionPriority",
+    "schema": "Correction",
+    "value": {
+      "kind": "wrong_priority",
+      "priority": "can_wait"
+    }
+  },
+  {
+    "name": "correctionDeadlineNone",
+    "schema": "Correction",
+    "value": {
+      "kind": "wrong_deadline",
+      "deadline": null
+    }
+  },
+  {
+    "name": "correctionBelongsTo",
+    "schema": "Correction",
+    "value": {
+      "kind": "belongs_to",
+      "taskId": "33333333-3333-4333-8333-333333333331"
+    }
+  },
+  {
+    "name": "clarificationAnswer",
+    "schema": "ClarificationAnswer",
+    "value": {
+      "optionId": "not_this_time",
+      "text": null,
+      "scope": "once"
+    }
+  },
+  {
+    "name": "settingsPatch",
+    "schema": "SettingsPatch",
+    "value": {
+      "scanTime": "06:30",
+      "extraScanIntervalMinutes": null,
+      "notifyUrgentDeadlines": true,
+      "quietHoursStart": "22:00",
+      "quietHoursEnd": null
+    }
+  },
+  {
+    "name": "appleSignIn",
+    "schema": "AppleSignIn",
+    "value": {
+      "identityToken": "eyJraWQiOiJleGFtcGxlIiwiYWxnIjoiUlMyNTYifQ.payload.signature",
+      "nonce": "raw-nonce-1234567890",
+      "deviceName": "MacBook",
+      "platform": "macos",
+      "fullName": "Alex Muster"
+    }
+  },
+  {
+    "name": "devSignIn",
+    "schema": "DevSignIn",
+    "value": {
+      "email": "dev@example.com",
+      "deviceName": "iPhone",
+      "platform": "ios"
+    }
+  },
+  {
+    "name": "pushRegistration",
+    "schema": "PushRegistration",
+    "value": {
+      "token": "a1b2c3d4e5f60718",
+      "environment": "sandbox",
+      "platform": "ios"
+    }
+  },
+  {
+    "name": "imapCreate",
+    "schema": "ImapAccountCreate",
+    "value": {
+      "displayName": "Hochschule",
+      "emailAddress": "student@univ.example",
+      "host": "imap.univ.example",
+      "port": 993,
+      "secure": true,
+      "username": "student",
+      "password": "app-spezifisches-passwort",
+      "initialImportDays": 14
+    }
+  },
+  {
+    "name": "messageToTask",
+    "schema": "MessageToTask",
+    "value": {
+      "title": "Formular abgeben"
+    }
+  },
+  {
+    "name": "messageLink",
+    "schema": "MessageToTask",
+    "value": {
+      "linkToTaskId": "33333333-3333-4333-8333-333333333331"
+    }
+  },
+  {
+    "name": "rulePatch",
+    "schema": "RulePatch",
+    "value": {
+      "applies": false,
+      "note": null
+    }
+  },
+  {
+    "name": "folderSelection",
+    "schema": "FolderSelection",
+    "value": {
+      "selectedFolderIds": [
+        "cdcdcdcd-cdcd-4dcd-8dcd-cdcdcdcdcdc1"
+      ]
+    }
+  },
+  {
+    "name": "scanRequestAll",
+    "schema": "ScanRequest",
+    "value": {}
+  }
+]

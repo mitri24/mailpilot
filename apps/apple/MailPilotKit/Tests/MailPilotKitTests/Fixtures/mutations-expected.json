@@ -1,0 +1,133 @@
+{
+  "mutations": [
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd1",
+      "clientTimestamp": "2026-10-23T08:00:00.000Z",
+      "type": "task.create",
+      "entityId": "33333333-3333-4333-8333-333333333332",
+      "payload": {
+        "title": "Formular abgeben",
+        "nextStep": "Unterschreiben und einscannen",
+        "priority": "important",
+        "deadline": {
+          "date": "2026-10-30",
+          "dateTime": null,
+          "precision": "date"
+        }
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd2",
+      "type": "task.update",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "baseVersion": 4,
+      "payload": {
+        "status": "doing",
+        "waiting": true,
+        "waitingCheckAt": "2026-10-28",
+        "snoozedUntil": "2026-10-24T06:00:00.000Z",
+        "plannedFor": null,
+        "sortKey": 2.5,
+        "title": null,
+        "priority": null,
+        "deadline": {
+          "date": null,
+          "dateTime": "2026-10-30T11:00:00.000Z",
+          "precision": "datetime"
+        },
+        "estimatedMinutes": null
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd3",
+      "type": "task.update",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "baseVersion": 5,
+      "payload": {
+        "deadlineCleared": true
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd4",
+      "type": "task.dismiss",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "baseVersion": 5
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd5",
+      "type": "task.restore",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "baseVersion": 6
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd6",
+      "clientTimestamp": "2026-10-23T08:01:00.000Z",
+      "type": "note.create",
+      "entityId": "44444444-4444-4444-8444-444444444441",
+      "payload": {
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "body": "Unterlagen liegen im Ordner „Uni“."
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd7",
+      "type": "note.update",
+      "entityId": "44444444-4444-4444-8444-444444444441",
+      "baseVersion": 2,
+      "payload": {
+        "body": "Unterlagen liegen im Ordner „Uni/2026“."
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd8",
+      "type": "note.delete",
+      "entityId": "44444444-4444-4444-8444-444444444442",
+      "baseVersion": 3
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-ddddddddddd9",
+      "type": "checklist.create",
+      "entityId": "55555555-5555-4555-8555-555555555551",
+      "payload": {
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "title": "PDF herunterladen",
+        "position": 3
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-dddddddddd10",
+      "type": "checklist.update",
+      "entityId": "55555555-5555-4555-8555-555555555551",
+      "baseVersion": 1,
+      "payload": {
+        "done": true
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-dddddddddd11",
+      "type": "checklist.delete",
+      "entityId": "55555555-5555-4555-8555-555555555552",
+      "baseVersion": 2
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-dddddddddd12",
+      "type": "clarification.answer",
+      "entityId": "66666666-6666-4666-8666-666666666661",
+      "payload": {
+        "optionId": "yes",
+        "text": null,
+        "scope": "permanent"
+      }
+    },
+    {
+      "idempotencyKey": "dddddddd-dddd-4ddd-8ddd-dddddddddd13",
+      "type": "clarification.answer",
+      "entityId": "66666666-6666-4666-8666-666666666661",
+      "payload": {
+        "optionId": null,
+        "text": "Nur für Gruppe B2",
+        "scope": "once"
+      }
+    }
+  ]
+}

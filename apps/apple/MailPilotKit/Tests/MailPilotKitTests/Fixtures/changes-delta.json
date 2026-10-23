@@ -1,0 +1,187 @@
+{
+  "changes": [
+    {
+      "seq": "1043",
+      "entityType": "task",
+      "entityId": "33333333-3333-4333-8333-333333333331",
+      "op": "upsert",
+      "version": 8,
+      "data": {
+        "id": "33333333-3333-4333-8333-333333333331",
+        "version": 8,
+        "origin": "ai",
+        "status": "done",
+        "waiting": true,
+        "waitingCheckAt": "2026-10-30",
+        "snoozedUntil": "2026-10-24T08:00:00+02:00",
+        "plannedFor": "2026-10-26",
+        "sortKey": 1.5,
+        "title": "Studienbescheinigung an Claire schicken",
+        "nextStep": "PDF im Studierendenportal laden und an Claire senden",
+        "summary": "Die Hochschule bittet um eine aktuelle Studienbescheinigung für das Austauschprogramm.",
+        "priority": "critical",
+        "priorityReason": "Belegte Frist; ohne Bescheinigung verfällt der Platz.",
+        "priorityIsManual": false,
+        "deadline": {
+          "date": "2026-11-02",
+          "dateTime": null,
+          "precision": "date",
+          "kind": "explicit",
+          "sourceQuote": "jusqu'à lundi 2 novembre"
+        },
+        "deadlineIsManual": false,
+        "why": "Du bist direkt adressiert. Im zweiten Absatz wirst du gebeten, die Bescheinigung zu schicken.",
+        "requiresAttachmentReading": true,
+        "estimatedMinutes": 15,
+        "estimateSource": "estimate",
+        "ai": {
+          "title": "Studienbescheinigung an Claire schicken",
+          "nextStep": "PDF im Studierendenportal laden und an Claire senden",
+          "summary": "Die Hochschule bittet um eine aktuelle Studienbescheinigung für das Austauschprogramm.",
+          "priority": "critical",
+          "priorityReason": "Belegte Frist; ohne Bescheinigung verfällt der Platz.",
+          "deadline": {
+            "date": "2026-11-02",
+            "dateTime": null,
+            "precision": "date",
+            "kind": "explicit",
+            "sourceQuote": "jusqu'à lundi 2 novembre"
+          },
+          "why": "Du bist direkt adressiert. Im zweiten Absatz wirst du gebeten, die Bescheinigung zu schicken."
+        },
+        "manual": {
+          "title": null,
+          "nextStep": null,
+          "priority": null,
+          "deadline": null,
+          "deadlineCleared": false
+        },
+        "accountIds": [
+          "11111111-1111-4111-8111-111111111111"
+        ],
+        "primarySource": {
+          "messageId": "22222222-2222-4222-8222-222222222221",
+          "accountId": "11111111-1111-4111-8111-111111111111",
+          "subject": "Attestation de scolarité",
+          "fromName": "Claire Dubois",
+          "fromAddress": "claire.dubois@univ.example",
+          "sentAt": "2026-10-20T11:15:00+02:00"
+        },
+        "sourceCount": 2,
+        "openClarifications": 1,
+        "latestChange": "Die Frist wurde von Freitag auf Montag verschoben.",
+        "doneAt": "2026-10-23T08:10:00.000Z",
+        "dismissedAt": null,
+        "mergedIntoTaskId": null,
+        "createdAt": "2026-10-20T09:20:00.000Z",
+        "updatedAt": "2026-10-23T08:10:00.000Z"
+      }
+    },
+    {
+      "seq": "1044",
+      "entityType": "note",
+      "entityId": "44444444-4444-4444-8444-444444444442",
+      "op": "delete",
+      "version": 2,
+      "data": null
+    },
+    {
+      "seq": "1045",
+      "entityType": "checklist_item",
+      "entityId": "55555555-5555-4555-8555-555555555552",
+      "op": "delete",
+      "version": 2,
+      "data": null
+    },
+    {
+      "seq": "1046",
+      "entityType": "task",
+      "entityId": "33333333-3333-4333-8333-333333333332",
+      "op": "delete",
+      "version": 2,
+      "data": null
+    },
+    {
+      "seq": "1047",
+      "entityType": "account",
+      "entityId": "11111111-1111-4111-8111-222222222222",
+      "op": "delete",
+      "version": 2,
+      "data": null
+    },
+    {
+      "seq": "1048",
+      "entityType": "rule",
+      "entityId": "77777777-7777-4777-8777-777777777771",
+      "op": "upsert",
+      "version": 2,
+      "data": {
+        "id": "77777777-7777-4777-8777-777777777771",
+        "version": 2,
+        "kind": "membership",
+        "subject": "B2",
+        "value": {
+          "applies": false,
+          "note": "Seit dem Wechsel in 3SN"
+        },
+        "description": "Du gehörst nicht zu „B2“",
+        "sourceClarificationId": "66666666-6666-4666-8666-666666666661",
+        "createdAt": "2026-10-22T06:10:00.000Z",
+        "updatedAt": "2026-10-22T06:10:00.000Z"
+      }
+    },
+    {
+      "seq": "1049",
+      "entityType": "clarification",
+      "entityId": "66666666-6666-4666-8666-666666666661",
+      "op": "upsert",
+      "version": 2,
+      "data": {
+        "id": "66666666-6666-4666-8666-666666666661",
+        "version": 2,
+        "kind": "membership",
+        "status": "answered",
+        "question": "Diese Mail betrifft die Gruppe B2. Gehörst du dazu?",
+        "reason": "Nur Mitglieder der Gruppe müssen das Formular abgeben.",
+        "excerpt": "Les étudiants du groupe B2 doivent rendre le formulaire.",
+        "options": [
+          {
+            "id": "yes",
+            "label": "Ja",
+            "scope": "permanent"
+          },
+          {
+            "id": "no",
+            "label": "Nein",
+            "scope": "permanent"
+          },
+          {
+            "id": "not_this_time",
+            "label": "Diesmal nicht",
+            "scope": "once"
+          },
+          {
+            "id": "later",
+            "label": "Weiß ich noch nicht",
+            "scope": "once"
+          }
+        ],
+        "allowFreeText": true,
+        "taskId": "33333333-3333-4333-8333-333333333331",
+        "messageId": "22222222-2222-4222-8222-222222222222",
+        "answer": {
+          "optionId": "yes",
+          "text": null,
+          "scope": "permanent",
+          "answeredAt": "2026-10-23T08:11:00+02:00"
+        },
+        "createdAt": "2026-10-22T06:00:00.000Z",
+        "updatedAt": "2026-10-22T06:00:00.000Z"
+      }
+    }
+  ],
+  "nextCursor": "1049",
+  "hasMore": true,
+  "resetRequired": false,
+  "serverTime": "2026-10-23T08:12:00.000Z"
+}

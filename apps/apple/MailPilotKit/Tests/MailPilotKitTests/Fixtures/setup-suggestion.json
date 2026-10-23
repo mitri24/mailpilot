@@ -1,0 +1,12 @@
+{
+  "provider": "imap",
+  "imap": {
+    "host": "imap.univ.example",
+    "port": 993,
+    "secure": true
+  },
+  "confidence": "probable",
+  "notes": [
+    "Hochschulkonten erlauben IMAP nicht immer; ggf. bei der IT nachfragen."
+  ]
+}

@@ -1,0 +1,16 @@
+// MailPilot – gemeinsame Build-Settings für alle Targets.
+// PLATZHALTER: Werte in Config/Local.xcconfig überschreiben (wird nicht eingecheckt, Vorlage: Local.xcconfig.example).
+
+// Bundle-ID der App. Erweiterungen hängen .widgets bzw. .share an.
+MAILPILOT_BUNDLE_ID = com.example.mailpilot
+
+// Apple-Developer-Team-ID (10 Zeichen). Leer = Xcode verlangt beim Signieren eine Auswahl.
+MAILPILOT_TEAM_ID =
+
+// App Group für den gemeinsamen Cache (App, Widget, Share Extension).
+MAILPILOT_APP_GROUP = group.$(MAILPILOT_BUNDLE_ID)
+
+// Keychain Access Group (ohne Team-Präfix; $(AppIdentifierPrefix) setzt Xcode beim Signieren davor).
+MAILPILOT_KEYCHAIN_GROUP = $(MAILPILOT_BUNDLE_ID).shared
+
+#include? "Local.xcconfig"

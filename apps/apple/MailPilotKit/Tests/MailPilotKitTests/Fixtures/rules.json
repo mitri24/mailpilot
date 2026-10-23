@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "id": "77777777-7777-4777-8777-777777777771",
+      "version": 1,
+      "kind": "membership",
+      "subject": "B2",
+      "value": {
+        "applies": true,
+        "note": null
+      },
+      "description": "Du gehörst zu „B2“",
+      "sourceClarificationId": "66666666-6666-4666-8666-666666666661",
+      "createdAt": "2026-10-22T06:10:00.000Z",
+      "updatedAt": "2026-10-22T06:10:00.000Z"
+    }
+  ]
+}

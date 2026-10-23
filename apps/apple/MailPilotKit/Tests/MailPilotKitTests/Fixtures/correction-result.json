@@ -1,0 +1,62 @@
+{
+  "task": {
+    "id": "33333333-3333-4333-8333-333333333332",
+    "version": 1,
+    "origin": "manual",
+    "status": "todo",
+    "waiting": false,
+    "waitingCheckAt": null,
+    "snoozedUntil": null,
+    "plannedFor": null,
+    "sortKey": null,
+    "title": "Fahrradschloss kaufen",
+    "nextStep": null,
+    "summary": null,
+    "priority": "can_wait",
+    "priorityReason": "Von dir festgelegt",
+    "priorityIsManual": true,
+    "deadline": {
+      "date": null,
+      "dateTime": "2026-10-30T17:00:00.000Z",
+      "precision": "datetime",
+      "kind": "explicit",
+      "sourceQuote": null
+    },
+    "deadlineIsManual": true,
+    "why": null,
+    "requiresAttachmentReading": false,
+    "estimatedMinutes": 30,
+    "estimateSource": "user",
+    "ai": {
+      "title": null,
+      "nextStep": null,
+      "summary": null,
+      "priority": null,
+      "priorityReason": null,
+      "deadline": null,
+      "why": null
+    },
+    "manual": {
+      "title": "Fahrradschloss kaufen",
+      "nextStep": null,
+      "priority": "can_wait",
+      "deadline": {
+        "date": null,
+        "dateTime": "2026-10-30T17:00:00.000Z",
+        "precision": "datetime"
+      },
+      "deadlineCleared": false
+    },
+    "accountIds": [],
+    "primarySource": null,
+    "sourceCount": 0,
+    "openClarifications": 0,
+    "latestChange": null,
+    "doneAt": null,
+    "dismissedAt": null,
+    "mergedIntoTaskId": null,
+    "createdAt": "2026-10-21T18:00:00Z",
+    "updatedAt": "2026-10-21T18:00:00Z"
+  },
+  "mergeId": "bcbcbcbc-bcbc-4cbc-8cbc-bcbcbcbcbcb1"
+}
