@@ -40,6 +40,23 @@ Platzhalter in `Config/Base.xcconfig` (in `Config/Local.xcconfig` überschreiben
 
 Die Werte landen über die Info.plist (`MailPilotAPIBaseURL`, `MailPilotAppGroup`, `MailPilotKeychainAccessGroup`) im Code (`AppConfiguration.fromBundle`). Im Simulator erreicht `localhost` den lokalen Server; auf einem Gerät die LAN-Adresse oder einen HTTPS-Server eintragen.
 
+## Auf dem eigenen Mac starten (auch mit kostenloser Apple-ID)
+
+Debug-Builds verwenden `MailPilot-Dev.entitlements` ohne Sign in with Apple. So kann auch ein kostenloses Apple-ID-Team signieren; angemeldet wird mit dem Entwicklungslogin. Release-Builds behalten Sign in with Apple und brauchen die Mitgliedschaft im Apple Developer Program.
+
+1. Server starten (siehe README) mit `DEV_LOGIN_ENABLED=true`.
+2. In `Config/Local.xcconfig` eine eigene Bundle-ID setzen und für den Mac die App Group mit Team-Präfix verwenden:
+   ```
+   MAILPILOT_BUNDLE_ID = de.deinname.mailpilot
+   MAILPILOT_APP_GROUP = $(TeamIdentifierPrefix)$(MAILPILOT_BUNDLE_ID)
+   ```
+3. `xcodegen generate`, dann `open MailPilot.xcodeproj`.
+4. In Xcode unter Einstellungen → Accounts die Apple-ID hinzufügen.
+5. Schema `MailPilot-macOS` und Ziel „Mein Mac“ wählen, bei den drei Mac-Targets unter „Signing & Capabilities“ das Team auswählen, mit ⌘R starten.
+6. In der App den Entwicklungslogin nutzen und ein Postfach verbinden. Widget: Rechtsklick auf den Schreibtisch → „Widgets bearbeiten …“ → MailPilot.
+
+Nicht geprüft: Die App-Targets wurden bisher nicht in Xcode gebaut. Ob ein kostenloses Team alle übrigen Capabilities (App Group, Keychain Sharing) signieren kann, zeigt erst der erste Build.
+
 ## Apple-Developer-Einstellungen
 
 - **App IDs**: App, `….widgets`, `….share`, jeweils für iOS und macOS (dieselbe Bundle-ID für beide Plattformen ist vorgesehen).
